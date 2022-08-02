@@ -60,4 +60,8 @@ span {
 
 .navBar {
   display: flex;
+  align-items: baseline;
+}
+.refresh {
+  margin-left: 30px;
 }

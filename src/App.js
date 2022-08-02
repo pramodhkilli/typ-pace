@@ -84,7 +84,6 @@ const App = () => {
     if (value.endsWith(" ")) {
       setActiveWordIndex((index) => index + 1);
       if (activeWordIndex === cloud.length - 1) {
-        refreshPage();
         setStartCounting(false);
       }
       setUserInput("");
@@ -112,14 +111,11 @@ const App = () => {
       <div className="header">
         <div className="navBar">
           <h1>Typ-pace</h1>
-          <div>
-            <object
-              data="../images/refresh-svgrepo-com.svg"
-              onClick={() => {
-                refreshPage();
-              }}
-              aria-label="refresh"
-            ></object>
+          <div className="refresh" onClick={() => refreshPage()}>
+            <img
+              src="https://img.icons8.com/external-dreamstale-lineal-dreamstale/20/000000/external-refresh-arrows-dreamstale-lineal-dreamstale.png"
+              alt="refresh"
+            />
           </div>
         </div>
         <Timer
